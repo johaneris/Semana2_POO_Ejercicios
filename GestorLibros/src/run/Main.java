@@ -36,8 +36,7 @@ public class Main {
                     if (libros[i].getTitulo().trim().equalsIgnoreCase(nombre)) {
                         System.out.println("Libro encontrado: " + libros[i].getTitulo());
                         found = true;
-                        // si quieres listar TODOS los que coincidan, NO hagas break
-                        break; // si solo quieres el primero, déjalo
+                        break;
                     }
                 }
 
@@ -57,7 +56,6 @@ public class Main {
                     if (libros[i].getAnio() == anioBuscado){
                         System.out.println("Libro encontrado: " + libros[i].getTitulo() + " (" + libros[i].getAnio() + ")");
                         found = true;
-                        // break si solo quieres uno
                     }
                 }
 
