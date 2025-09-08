@@ -43,8 +43,22 @@ public class Contacto {
     public void setCorreo(String correo) {
 
 //        int longitud = correo.length();
-        if(correo.endsWith("@gmail.com")){
+        if(correo.endsWith(".com") || correo.endsWith(".edu")  && correo.contains("@")) {
             this.correo = correo;
+        }else{
+            System.out.println("Correo no valido");
         }
     }
+
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Nombre  : %s%nTelefono: %s%nCorreo  : %s",
+                nombre == null ? "-" : nombre,
+                telefono == null ? "-" : telefono,
+                correo == null ? "-" : correo
+        );
+    }
+
 }
